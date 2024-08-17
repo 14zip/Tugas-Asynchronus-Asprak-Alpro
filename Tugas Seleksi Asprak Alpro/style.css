@@ -1,0 +1,107 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Outfit", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    box-sizing: border-box;
+}
+body {
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(#F1EEDC, #E5DDC5, #BED7DC, #B3C8CF);
+    padding: 10px;
+}
+h1 {
+    color: #5484d2;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.container {
+    max-width: fit-content;
+    background: white;
+    margin: 100px auto 20px;
+    padding: 40px 24px 64px;
+    border-radius: 10px;
+}
+#member-name, #task-name, #due-date, #task-member {
+    flex: 1;
+    border: none;
+    outline: none;
+    background: transparent;
+    padding: 12px;
+    padding-left: 20px;
+    align-items: center;
+    justify-content: space-between;
+    background: #edeef0;
+    border-radius: 30px;
+    margin-bottom: 24px;
+    margin-right: 8px;
+    color: gray;
+}
+h2 {
+    font-size: 16px;
+    margin-left: 16px;
+    margin-bottom: 8px;
+    color: #5484d2;
+}
+.add-member {
+    display: flex;
+}
+.add-task {
+    display: flex;
+}
+button {
+    border: none;
+    outline: none;
+    max-height: 42px;
+    padding: 10px;
+    width: 120px;
+    background: #47da64;
+    color: white;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 30px;
+}
+ul li {
+    list-style: none;
+    font-size: 14px;
+    padding: 12px 8px 12px 50px;
+    user-select: none;
+    cursor: pointer;
+    position: relative;
+}
+ul li::before {
+    content: '';
+    position: absolute;
+    height: 28px;
+    width: 28px;
+    border-radius: 50%;
+    background-image: url(img/unchecked.png);
+    background-size: cover;
+    background-position: center;
+    top: 8px;
+    left: 8px;
+}
+ul li.checked {
+    color: #555;
+    text-decoration: line-through;
+}
+ul li.checked::before {
+    background-image: url(img/checked.png) ;
+}
+.delete {
+    position: absolute;
+    right: 0;
+    top: 4px;
+    width: 40px;
+    height: 40px;
+    font-size: 22px;
+    color: gray;
+    line-height: 40px;
+    text-align: center;
+}
+.delete:hover {
+    background: #edeef0;
+}

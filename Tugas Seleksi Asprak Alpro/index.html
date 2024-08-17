@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Manager App</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+<div class="container">
+    <h1>Task Manager<img src="img/task.png" style="width: 40px; margin: 10px;"></h1>
+    <h2>Add Member</h2>
+    <div class="add-member">
+        <input type="text" id="member-name" placeholder="Enter member name">
+        <button onclick="addMember()">Add</button>
+    </div>
+    <h2>Add Task</h2>
+    <div class="add-task">
+        <input type="text" id="task-name" placeholder="Enter task name">
+        <input type="date" id="due-date" placeholder="Enter due date">
+        <select id="task-member">
+            <option value="">Assign to member</option>
+        </select>
+        <button onclick="addTask()">Add</button>
+    </div>
+    <ul id="task-list" class="task-list"></ul>
+    <ul id="list-container">
+        <!--<li class="checked">Task 1</li>
+        <li>Task 2</li>
+        <li>Task 3</li>-->
+    </ul>
+</div>
+<script src="app.js"></script>
+</body>
+</html>
